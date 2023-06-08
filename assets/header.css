@@ -1,89 +1,118 @@
 
+*{
+    font-family: 'Philosopher', sans-serif;
+    line-height:3vw;
+}
+
+p{
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6rem;
+}
+
 .header{
-    display: flex;
     position:relative;
     text-align:center;
-    width:cover;
-    color:white;
-    border:solid red 5px;
+    width:100vw;
+    height:fit-content;
+    color:#E8EEFF;
     background: url(./image1/headerbackground.png) no-repeat;
-    background-size: 100% 100%;
+    background-size: 100vw;
+    /* border: red solid 2px; */
+    display:flex;
+
 }
 .header__info{
     flex:1;
     position:relative;
-    margin:4rem 5rem;
+    margin:8%;
     /* background-color: rgba(999,0,0,0.2); */
 }
 
 .header__skylogo{
-    width: 10rem;
+    width: 15vw;
 }
 .header__commingsoon{
-    font-size:3rem;
+    font-size:4vw;
     position:relative;
-    top:-4rem;
-    color:white;
-    text-shadow: -10px 0px 15px #49AADD, 10px 0px 15px #49AADD, 0px 10px 15px #49AADD, 0px -10px 15px #49AADD;
+    top:-5vw;
+    color:#E8EEFF;
+    text-shadow: -10px 0px 15px #c6f0f5, 10px 0px 15px #c6f0f5, 0px 10px 15px #c6f0f5, 0px -10px 15px #c6f0f5;
 }
 .header__introduce{
-    font-size:1rem;
+    /* font-size:2vw; */
+    font-size: 1.5rem;
+    font-weight:500;
     position:relative;
-    top:-4rem;
+    top:-5vw;
+    padding-bottom: 2rem;
+    line-height: 1.8rem;
 }
 .header__wishlist:hover{
     opacity: 0.8;
 }
 .header__wishlist{
-    font-size:2rem;
+    font-size:1.8vw;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 700;
     position:relative;
-    top:-2.5rem;
+    top:-2.5vw;
     background: #6089FF;
-    padding: 0.5rem;
-    border-radius: 3rem;
-    color: white;
+    padding:1rem 1.5rem;
+    margin: 2vw;
+    border-radius: 3vw;
+    color: white ;
     text-decoration-line: none;
     cursor:pointer;
     transition: opacity 0.1s ease;
 }
+
+
+
 /* Giải thưởng */
 .footer{
     background: #455DA1;
-    padding: 10%;
+    padding: 10vw;
+}
+
+.footer h2{
+    font-size: 3.5rem;
 }
 #footer{
-    background: #455DA1;
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-around;
+    align-items: center;
+    justify-content:space-between;
 }
 .footerimg{
-    flex:1;
-    margin: 2rem;
-    width: 2rem;
+    margin: 2vw;
+    width: 15vw;
+    height:fit-content;
 }
+
+
 /*time*/
-#bodem{
+#time{
     margin:auto;
+    margin-bottom: 1vw;
     background: rgba(209,203,255,0.5);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    border-radius: 1rem;
-}
-.time{
-    flex-direction:row;
-    display: flex;
-}
-
-#day,#hour,#minute{
-    color:#1e2859;
-font-size: 4rem;
-}
-.item{
+    justify-content:space-around;
+    align-items:last baseline;
+    border-radius: 1vw;
+    font-size:2vw;
+    padding:2vw;
     color:#504b71;
     opacity:0.7;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
+    width: 50%;
+    box-shadow: -10px 0px 15px rgba(209,203,255,0.5), 10px 0px 15px rgba(209,203,255,0.5), 0px 10px 15px rgba(209,203,255,0.5), 0px -10px 15px rgba(209,203,255,0.5);
 }
-
+#day,#hour,#minute{
+        color:#1e2859;
+        font-size: 4vw;
+        font-weight: 800;
+    }
+.timecount{
+    font-size:1.5vw;
+    color:#1e2859;
+}
