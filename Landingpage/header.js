@@ -1,14 +1,26 @@
-let endDate = new Date("01/12/2023 00:00:00").getTime();
-let check = setInterval(function(){
-    let now = new Date().getTime();
-    let distance = endDate - now;
-    let day = Math.floor(distance / (24*60*60*1000));
-    let hour = Math.floor((distance % (24*60*60*1000)) / (60* 60*1000));
-    let minute = Math.floor((distance % (60* 60*1000)) / (60*1000));
-    document.getElementById('day').innerText = day;
-    document.getElementById('hour').innerText = hour;
-    document.getElementById('minute').innerText = minute;
-    if(distance <= 0){
-        clearInterval(check);
-    }
+function updateCountdown(targetDate) {
+  let now = new Date();
+  let diff = targetDate - now;
+
+  if (diff <= 0) {
+    document.querySelector("#countdown").innerHTML = "Tải ngay";
+    return;
+  }
+
+  let days = Math.floor(diff / 1000 / 60 / 60 / 24);
+  let hours = Math.floor(diff / 1000 / 60 / 60) % 24;
+  let minutes = Math.floor(diff / 1000 / 60) % 60;
+  let seconds = Math.floor(diff / 1000) % 60;
+
+  document.querySelector("#day").innerHTML = ` ${days}`;
+  document.querySelector("#hour").innerHTML = ` ${hours}`;
+  document.querySelector("#minute").innerHTML = ` ${minutes}`;
+
+
+}
+
+let targetDate = new Date(2023, 08, 01, 0, 0, 0);
+updateCountdown(targetDate);
+setInterval(() => {
+  updateCountdown(targetDate);
 }, 1000);
