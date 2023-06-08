@@ -24,3 +24,14 @@ updateCountdown(targetDate);
 setInterval(() => {
   updateCountdown(targetDate);
 }, 1000);
+
+const faqs = document.querySelectorAll('.faq')
+
+
+  faqs.forEach(faq => {
+    faq.addEventListener('click' , () => {
+      faq.classList.toggle('open');
+    })
+    }) 
+
+
